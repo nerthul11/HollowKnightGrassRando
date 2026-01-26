@@ -45,7 +45,7 @@
     },
     {
         "name": "Basin_Palace_Grounds-Group_0",
-        "logic": "Abyss_05[right1] | Abyss_05[left1]"
+        "logic": "Abyss_05"
     },
     {
         "name": "Basin_Simple_Key-Group_0",
@@ -297,19 +297,19 @@
     },
     {
         "name": "Edge_Hornet_Sentinel_Arena-Group_1",
-        "logic": "Deepnest_East_Hornet[left2] | (Deepnest_East_Hornet[left1] + Defeated_Hornet_2 + (WINGS | FULLCLAW))"
+        "logic": "Deepnest_East_Hornet[left1] | (Deepnest_East_Hornet[left2] + Defeated_Hornet_2 + (WINGS | FULLCLAW))"
     },
     {
         "name": "Edge_Hornet_Sentinel_Arena-Group_2",
-        "logic": "Deepnest_East_Hornet[left2] | (Deepnest_East_Hornet[left1] + Defeated_Hornet_2 + (RIGHTCLAW + (LEFTCLAW | WINGS)))"
+        "logic": "Deepnest_East_Hornet[left1] | (Deepnest_East_Hornet[left2] + Defeated_Hornet_2 + (RIGHTCLAW + (LEFTCLAW | WINGS)))"
     },
     {
         "name": "Edge_Hornet_Sentinel_Arena-Group_3",
-        "logic": "Deepnest_East_Hornet[left1] | (Deepnest_East_Hornet[left2] + Defeated_Hornet_2)"
+        "logic": "Deepnest_East_Hornet[left2] | (Deepnest_East_Hornet[left1] + Defeated_Hornet_2)"
     },
     {
         "name": "Edge_Hornet_Sentinel_Arena-Group_4",
-        "logic": "(Deepnest_East_Hornet[left2] + Defeated_Hornet_2) | (Deepnest_East_Hornet[left1] + (WINGS | FULLCLAW))"
+        "logic": "(Deepnest_East_Hornet[left1] + Defeated_Hornet_2) | (Deepnest_East_Hornet[left2] + (WINGS | FULLCLAW))"
     },
     {
         "name": "Edge_Hornet_Sentinel_Corridor-Group_0",
@@ -325,11 +325,11 @@
     },
     {
         "name": "Edge_Outside_Markoth-Group_0",
-        "logic": "Deepnest_East_18[top1] | (Deepnest_East_18[right2] + LEFTSHADOWDASH) | Deepnest_East_18[bot1]"
+        "logic": "Deepnest_East_18[top1] | (Deepnest_East_18[right2] + Shade_Gate-Markoth?LEFTSHADOWDASH) | Deepnest_East_18[bot1]"
     },
     {
         "name": "Edge_Outside_Markoth-Group_1",
-        "logic": "Deepnest_East_18[top1] | (((Deepnest_East_18[right2] + LEFTSHADOWDASH) | Deepnest_East_18[bot1]) + RIGHTCLAW | WINGS)"
+        "logic": "Deepnest_East_18[top1] | (((Deepnest_East_18[right2] + Shade_Gate-Markoth?LEFTSHADOWDASH) | Deepnest_East_18[bot1]) + RIGHTCLAW | WINGS)"
     },
     {
         "name": "Edge_Outside_Oro-Group_0",
@@ -361,11 +361,11 @@
     },
     {
         "name": "Fog_Cornifer-Group_0",
-        "logic": "Fungus3_25[left1] | (Fungus3_25[right1] + LEFTSHADOWDASH)"
+        "logic": "Fungus3_25[left1] | (Fungus3_25[right1] + Shade_Gate-Fog_Canyon?LEFTSHADOWDASH)"
     },
     {
         "name": "Fog_Cornifer-Group_1",
-        "logic": "Fungus3_25[right1] | (Fungus3_25[left1] + RIGHTSHADOWDASH)"
+        "logic": "Fungus3_25[right1] | (Fungus3_25[left1] + Shade_Gate-Fog_Canyon?RIGHTSHADOWDASH)"
     },
     {
         "name": "Fog_Corridor_to_Archives-Group_0",
@@ -461,11 +461,11 @@
     },
     {
         "name": "Gardens_Cornifer-Group_1",
-        "logic": "Fungus1_24[left1] + (WINGS | RIGHTCLAW | (RIGHTDASH + LEFTCLAW))"
+        "logic": "Fungus1_24[left1] + (WINGS | RIGHTCLAW | (RIGHTDASH + LEFTCLAW) | Collapser-Garden_Map?FALSE + $SHADESKIP | Bench-Gardens_Cornifer)"
     },
     {
         "name": "Gardens_Cornifer-Group_2",
-        "logic": "Fungus1_24[left1] + (ANYCLAW | WINGS)"
+        "logic": "Fungus1_24[left1] + (ANYCLAW | WINGS | Collapser-Garden_Map?FALSE + $SHADESKIP | Bench-Gardens_Cornifer + Collapser-Garden_Map?TRUE)"
     },
     {
         "name": "Gardens_Corridor_To_Deepnest-Group_0",
@@ -565,11 +565,11 @@
     },
     {
         "name": "Gardens_Traitor_Lord_Arena-Group_0",
-        "logic": "Fungus3_23[left1] | Fungus3_23[right1] + LEFTSHADOWDASH + (ANYCLAW | WINGS) + Defeated_Traitor_Lord"
+        "logic": "Fungus3_23[left1] | Fungus3_23[right1] + Shade_Gate-Traitor_Lord?LEFTSHADOWDASH + (ANYCLAW | WINGS) + Defeated_Traitor_Lord"
     },
     {
         "name": "Gardens_Upper_Grub-Group_0",
-        "logic": "Fungus3_22 + (FULLCLAW + LEFTSUPERDASH + (RIGHTSUPERDASH | WINGS))"
+        "logic": "Fungus3_22 + Wall-QG_Glass?TRUE + (FULLCLAW + LEFTSUPERDASH + (RIGHTSUPERDASH | WINGS))"
     },
     {
         "name": "Greenpath_Above_Fog_Canyon-Group_0",
@@ -693,7 +693,7 @@
     },
     {
         "name": "Greenpath_Outside_Sheo-Group_0",
-        "logic": "(Fungus1_15[right1]  | Fungus1_15[door1] ) + (LEFTCLAW | FIREBALLSKIPS | LEFTDASH | LEFTSUPERDASH | WINGS)"
+        "logic": "(Fungus1_15[right1] | Fungus1_15[door1]) + (LEFTCLAW | FIREBALLSKIPS | LEFTDASH | LEFTSUPERDASH | WINGS)"
     },
     {
         "name": "Greenpath_Outside_Sheo-Group_1",
@@ -702,6 +702,14 @@
     {
         "name": "Greenpath_Outside_Sheo-Group_2",
         "logic": "Fungus1_15[right1] | Fungus1_15[door1]"
+    },
+    {
+        "name": "Greenpath_Outside_Sheo-Group_3",
+        "logic": "Fungus1_15[right1] + (WINGS | ANYCLAW | UPSLASH + (FIREBALLSKIPS | LEFTDASH | LEFTSUPERDASH)) | Fungus1_15[door1] + LEFTDASH"
+    },
+    {
+        "name": "Greenpath_Outside_Sheo-Group_4",
+        "logic": "Fungus1_15[right1] + (WINGS | LEFTCLAW | RIGHTCLAW + (FIREBALLSKIPS | LEFTDASH | LEFTSUPERDASH)) | Fungus1_15[door1] + LEFTDASH"
     },
     {
         "name": "Greenpath_Outside_Stag-Group_0",
@@ -713,7 +721,7 @@
     },
     {
         "name": "Greenpath_Outside_Stag-Group_2",
-        "logic": "Fungus1_22[left1] | Fungus1_22[bot1] | Fungus1_22[top1]"
+        "logic": "Fungus1_22[bot1] | (Fungus1_22[left1] | Fungus1_22[top1]) + Switch-Greenpath_Stag?TRUE"
     },
     {
         "name": "Greenpath_Outside_Thorns-Group_0",
@@ -769,7 +777,11 @@
     },
     {
         "name": "Greenpath_Thorns_of_Agony-Group_1",
-        "logic": "Fungus1_14[left1] + RIGHTDASH"
+        "logic": "Fungus1_14[left1] + (RIGHTDASH | LEFTCLAW + RIGHTSUPERDASH | Vine-Thorns?FALSE)"
+    },
+    {
+        "name": "Greenpath_Thorns_of_Agony-Group_2",
+        "logic": "Fungus1_14[left1] + (RIGHTDASH | LEFTCLAW + RIGHTSUPERDASH | Vine-Thorns?FALSE + (LEFTDASH | LEFTSUPERDASH) + (LEFTCLAW | WINGS + RIGHTCLAW))"
     },
     {
         "name": "Greenpath_Toll-Group_0",
@@ -797,7 +809,7 @@
     },
     {
         "name": "Greenpath_Whispering_Root-Group_3",
-        "logic": "Fungus1_13[left1] + (SIDESLASH | CYCLONE | GREATSLASH | RIGHTDASHSLASH | LEFTDASHSLASH + DASHMASTER + OBSCURESKIPS) | Fungus1_13[right1] + (LEFTCLAW | RIGHTCLAW + WINGS + (LEFTDASH | LEFTSUPERDASH) | (WINGS | LEFTSUPERDASH) + DAMAGEBOOSTS + $TAKEDAMAGE) + (SIDESLASH | CYCLONE | GREATSLASH | LEFTDASHSLASH | RIGHTDASHSLASH + DASHMASTER + OBSCURESKIPS)  | $StartLocation[Lower Greenpath] + (SIDESLASH | CYCLONE | GREATSLASH | LEFTDASHSLASH | RIGHTDASHSLASH + DASHMASTER + OBSCURESKIPS)"
+        "logic": "Fungus1_13[left1] + (Vine-Root_Left?TRUE + (Vine-Root_Left?FALSE | SIDESLASH | CYCLONE | GREATSLASH | RIGHTDASHSLASH | LEFTDASHSLASH + DASHMASTER + OBSCURESKIPS)) | Fungus1_13[right1] + (LEFTCLAW | RIGHTCLAW + WINGS + (Vine-Vessel_Fragment?FALSE | LEFTDASH | LEFTSUPERDASH) | (WINGS | LEFTSUPERDASH) + DAMAGEBOOSTS + $TAKEDAMAGE) + Vine-Root_Right?TRUE + (Vine-Root_Right?FALSE | SIDESLASH | CYCLONE | GREATSLASH | LEFTDASHSLASH | RIGHTDASHSLASH + DASHMASTER + OBSCURESKIPS)  | $StartLocation[Lower Greenpath] + Vine-Root_Right?TRUE + (Vine-Root_Right?FALSE | SIDESLASH | CYCLONE | GREATSLASH | LEFTDASHSLASH | RIGHTDASHSLASH + DASHMASTER + OBSCURESKIPS)"
     },
     {
         "name": "Grounds_Blue_Lake-Group_Egg",
@@ -925,6 +937,6 @@
     },
     {
         "name": "Palace_Throne-Group_0",
-        "logic": "White_Palace_09[right1] + (LEFTSUPERDASH + (FULLCLAW | WINGS) | RIGHTCLAW + LEFTDASH + OBSCURESKIPS + PRECISEMOVEMENT + LEFTSHARPSHADOW + QUAKE)"
+        "logic": "White_Palace_09[right1] + (LEFTSUPERDASH + (FULLCLAW | WINGS) | RIGHTCLAW + LEFTDASH + OBSCURESKIPS + PRECISEMOVEMENT + LEFTSHARPSHADOW + Dive_Floor-White_Palace_Nursery?QUAKE)"
     }
 ]
