@@ -9,6 +9,7 @@ using System.Reflection;
 using GrassCore;
 using GrassRando.Data;
 using GrassRando.Settings;
+using ConnectionSettingsRando;
 
 namespace GrassRando
 {
@@ -39,6 +40,8 @@ namespace GrassRando
 
             // Menu pages
             RandoMenuPage.Hook();
+            // CSR
+            if (ModHooks.GetMod("ConnectionSettingsRando") is Mod) { HookCSR(); }
             // RSM
             if (ModHooks.GetMod("RandoSettingsManager") is Mod) { HookRSM(); }
 
@@ -50,6 +53,13 @@ namespace GrassRando
             Log("Initialized");
         }
 
+        public static void HookCSR()
+        {
+            CSR.Register(
+            Instance.GetName(),
+            () => Instance.settings,
+            s => SettingsRandomizer.CopyTo(s, Instance.settings));
+        }
         private void HookRSM()
         {
             RandoSettingsManagerMod.Instance.RegisterConnection(new SimpleSettingsProxy<ConnectionSettings>(

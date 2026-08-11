@@ -237,7 +237,7 @@
     },
     {
         "name": "Dream_Outside_Shrine-Group_0",
-        "logic": "RestingGrounds_08[left1] + (SWIM + LEFTCLAW | SWIM + WINGS + ANYCLAW | RIGHTSUPERDASH + FULLCLAW | RIGHTSUPERDASH + WINGS + ANYCLAW | WINGS + RIGHTDASH | RIGHTCLAW + RIGHTDASH + DIFFICULTSKIPS + (SWIM | RIGHTSUPERDASH))"
+        "logic": "RestingGrounds_08[left1] + DREAMNAIL + (SWIM + LEFTCLAW | SWIM + WINGS + ANYCLAW | RIGHTSUPERDASH + FULLCLAW | RIGHTSUPERDASH + WINGS + ANYCLAW | WINGS + RIGHTDASH | RIGHTCLAW + RIGHTDASH + DIFFICULTSKIPS + (SWIM | RIGHTSUPERDASH))"
     },
     {
         "name": "Dream_Soul_Tyrant-Group_0",
@@ -253,7 +253,7 @@
     },
     {
         "name": "Edge_Bardoon-Group_0",
-        "logic": "Deepnest_East_04 + FULLCLAW"
+        "logic": "Deepnest_East_04[right2] + (RIGHTCLAW | WINGS | LEFTCLAW + RIGHTDASH)"
     },
     {
         "name": "Edge_Bardoon-Group_1",
